@@ -1,19 +1,51 @@
+@font-face {
+    font-family: 'MergeBlack';
+    src: url('/public/fonts/opensans-300.woff2') format('woff2'), url('/public/fonts/opensans-700.woff2') format('woff2'), url('/public/fonts/opensans-400.woff2') format('woff2'), url('/public/fonts/opensans-600.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
-    /* color: #fff !important; */
+    /* font-family: 'MergeBlack', sans-serif; */
+    /* font-family: sans-serif; */
+}
+
+/* Đặt font chữ cho các phần tử cụ thể trong Bootstrap */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'MergeBlack', sans-serif;
+}
+
+/* Hoặc sử dụng class Bootstrap để áp dụng cho các phần tử cụ thể */
+.navbar {
+    font-family: 'MergeBlack', sans-serif;
 }
 .red {
     color: #e31837;
+}
+.black {
+    color: #000;
 }
 .white {
     color: #fff !important;
     font-weight: 600;
 }
+.show {
+    display: block !important;
+}
 ul {
     list-style: none;
 }
 ul li {
-    padding: 8px 0px;
+    /* padding: 8px 0px; */
 }
+.fontw-700 {
+    font-weight: 700;
+}
+
 a:hover {
     color: #fff;
     text-decoration: underline !important;
@@ -40,13 +72,14 @@ a:hover {
     width: 280px;
 }
 .services {
-    background: url(img/jollibee-kid-party-bg.png) repeat;
+    background: url(../img/jollibee-kid-party-bg.png) repeat;
     background-size: contain;
     padding: 70px 20px;
 }
 .title-widget-services {
     font-size: 36px;
     font-family: 'MergeBlack', sans-serif;
+
     color: #e31837;
     text-transform: uppercase;
 }
@@ -55,6 +88,7 @@ a:hover {
     font-size: 21px;
     text-transform: uppercase;
     font-family: 'MergeBlack', sans-serif;
+
     color: #000;
 }
 .desc-widget-services-1 {
@@ -162,7 +196,7 @@ a:hover {
     left: -50px;
     height: 34px;
     width: 100px;
-    background: url(img/bg-header.png) center no-repeat;
+    background: url(../img/bg-header.png) center no-repeat;
     background-size: cover;
     overflow: hidden;
     display: block;
@@ -175,7 +209,7 @@ a:hover {
     content: '';
     margin-right: 5px;
     border-radius: 50%;
-    background: url(img/flag-vn.png) no-repeat center center;
+    background: url(../img/flag-vn.png) no-repeat center center;
     border: 1px solid #fff;
 }
 .icon-lang-en::before {
@@ -186,7 +220,7 @@ a:hover {
     content: '';
     margin-right: 5px;
     border-radius: 50%;
-    background: url(img/flag-en.png) no-repeat center center;
+    background: url(../img/flag-en.png) no-repeat center center;
     border: 1px solid #fff;
 }
 .icon-lang {
@@ -208,7 +242,7 @@ a:hover {
     background-color: #e31837;
 }
 .active {
-    color: #e31837 !important;
+    /* color: #e31837 !important; */
     background-color: #f4d2d6;
     display: block;
     transition: background-color 0.2s linear;
@@ -226,21 +260,27 @@ a:hover {
 .navbar {
     font-family: 'Merge Black W00 Regular';
 }
-.navbar-nav .nav-link:hover {
+/* .navbar-nav .nav-link:hover {
     color: #e31837 !important;
-    background-color: #f4d2d6 !important;
-    transition: background-color 0.2s linear !important;
+    background-color: #f4d2d6;
+    display: block;
+    transition: background-color 0.2s linear;
     border-radius: 10px 10px 0 0;
-}
+    text-decoration: none !important;
+} */
 .nav-link:hover {
     color: #e31837 !important;
-    background-color: #f4d2d6 !important;
-    transition: background-color 0.2s linear !important;
+    background-color: #f4d2d6;
+    display: block;
+    transition: background-color 0.2s linear;
     border-radius: 10px 10px 0 0;
+    text-decoration: none !important;
 }
+
 .menu .nav-link {
     color: #fff;
 }
+
 .navbar-nav > li > a {
     display: block;
     transition: background-color 0.2s linear;
@@ -249,7 +289,10 @@ a:hover {
     font-size: 14px;
     text-transform: uppercase;
     font-weight: bold;
+    margin-top: 2px;
+    font-family: sans-serif;
 }
+
 .order_pick_up {
     background-color: #ffc522;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.25);
@@ -262,11 +305,16 @@ a:hover {
     line-height: 40px;
     display: inline-block;
     text-transform: uppercase;
-    font-family: 'Merge Black W00 Regular';
+    font-family: 'MergeBlack', sans-serif;
+
     font-size: 20px;
 }
 .menu .nav-item {
-    padding: 0px 3px;
+    /* padding: 1px 3px; */
+    padding: 0px 5px;
+}
+.navbar-nav {
+    margin-bottom: -1px;
 }
 .panel-header > * {
     color: #000;
@@ -275,7 +323,7 @@ a:hover {
     color: #000;
     text-transform: uppercase;
     font-size: 14px;
-    font-family: 'Merge Black W00 Regular';
+    /* font-family: 'MergeBlack', sans-serif;    */
     letter-spacing: 0.15px;
     font-weight: 700;
 }
@@ -300,7 +348,8 @@ a {
 .logo {
 }
 .title {
-    font-family: 'Merge Black W00 Regular';
+    font-family: 'MergeBlack', sans-serif;
+
     font-size: 45px;
     text-transform: uppercase;
     color: #fff;
@@ -319,7 +368,7 @@ a {
     margin-left: 4px;
     display: initial;
     width: 100%;
-    background: url(img/bg-wood.jpg) repeat center center;
+    background: url(../img/bg-wood.jpg) repeat center center;
     background-size: cover;
     -webkit-transition: all 0.2s linear;
     -moz-transition: all 0.2s linear;
@@ -333,6 +382,7 @@ a {
     color: #000;
     background: #ffc522;
     font-family: 'MergeBlack', sans-serif;
+
     padding: 5px 20px;
     font-size: 16px;
     box-shadow: none;
