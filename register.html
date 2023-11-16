@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Latest compiled and minified CSS -->
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.6.0/css/bootstrap.css" /> -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+        <!-- jQuery (để sử dụng các plugin của Bootstrap cần jQuery) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+        <!-- //calendar  -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.0/js/bootstrap.js"></script> -->
+        <link rel="stylesheet" href="public/css/index.css" />
+        <link rel="stylesheet" href="public/css/order.css" />
+        <link rel="stylesheet" href="public/css/product.css" />
+        <script src="public/js/index.js"></script>
+
+        <!-- //font-awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://db.onlinewebfonts.com/c/a2029ef7cc1a92ac4469e7891b9195f6?family=Merge" rel="stylesheet" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="wrapper" class="w-100">
+            <div class="container-fluid px-0">
+                <!-- <div class="header">
+                    <div class="page-header">
+                        <div class="panel-wrapper">
+                            <style></style>
+                            <div class="panel-header">
+                                <div class="row w-100 alg-center">
+                                    <div class="col-4 language-joli d-flex">
+                                        <div class="lang-vn d-flex">
+                                            <div class="icon-lang-vn"></div>
+                                            <span class="text red">VN <span class="mr-2">|</span> </span>
+                                        </div>
+                                        <div class="lang-vn d-flex">
+                                            <div class="icon-lang-en"></div>
+                                            <span class="text">EN</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="address-vn d-flex">
+                                            <i class="fas fa-map-marker-alt mr-2"></i>
+                                            <a class="d-flex" href>
+                                                <div class="icon-maps"></div>
+                                                <span class="text">Hồ Chí Minh</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="account d-flex alg-center white-space-nowrap">
+                                            <img src="public/img/icon-user.png" alt="" />
+                                            <div class="ml-2 login text">
+                                                <a href>Đăng nhập <span>/</span> </a>
+                                            </div>
+
+                                            <div class="register text ml-2">
+                                                <a href>Đăng ký</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-content px-5">
+                            <div class="row alg-center">
+                                <div class="logo-joli col-1 mb-1">
+                                    <a href="index.html">
+                                        <img src="public/img/logo.png" width="100px" height="100px" alt />
+                                    </a>
+                                </div>
+
+                                <div class="col-9 pt-5">
+                                    <nav class="navbar pb-0 navbar-expand-lg">
+                                        <div class="collapse navbar-collapse" id="navbarNav">
+                                            <ul class="navbar-nav menu">
+                                                <li class="nav-item active">
+                                                    <a class="nav-link" href="index.html">Trang chủ </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">Về Jollibe</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="order.html">Thực đơn</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">Khuyến mãi</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">Dịch vụ</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">Tin tức</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">Cửa hàng</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">Liên hệ</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="#">Tuyển dụng</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </nav>
+                                </div>
+                                <style></style>
+                                <div class="col-2 d-flex alg-center">
+                                    <div class="order">
+                                        <a href="" class="order_pick_up">Pick up</a>
+                                    </div>
+                                    <div class="hotline ml-4">
+                                        <a href=""><img src="public/img/delivery-lg-rs.png" width="100px" height="27px" alt="" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="content text-center" style="height: 600px; width: 700px; margin: 0px auto">
+                    <style>
+                        .header-register {
+                        }
+
+                        .input-regis {
+                            height: 52px !important;
+                            border-radius: 8px;
+                            border: 1px solid #9e9e9e;
+                        }
+                    </style>
+                    <div class="header-register title-widget-services">
+                        <h1>Đăng ký tài khoản</h1>
+                    </div>
+                    <div class="register-container">
+                        <form>
+                            <div class="form-group w-100 col-md-12">
+                                <input type="text" class="form-control input-regis" id="firstName" placeholder="Họ *" name="firstName" required />
+                            </div>
+                            <div class="form-group col-md-12">
+                                <input type="text" class="form-control input-regis" id="lastName" placeholder="Tên *" name="lastName" required />
+                            </div>
+
+                            <div class="form-group col-md-12">
+                                <input type="tel" class="form-control input-regis" id="phone" placeholder="Số điện thoại *" name="phone" required />
+                            </div>
+                            <div class="form-group col-md-12">
+                                <input type="email" class="form-control input-regis" id="email" placeholder="E-mail" name="email" required />
+                            </div>
+
+                            <div class="form-group col-md-12">
+                                <input type="password" class="form-control input-regis" id="password" placeholder="Mật khẩu *" name="password" required />
+                            </div>
+                            <div class="form-group col-md-12">
+                                <input type="password" class="form-control input-regis" id="confirmPassword" placeholder="Xác nhận mật khẩu *" name="confirmPassword" required />
+                            </div>
+                            <div class="form-group col-md-12">
+                                <select class="form-control input-regis" id="gender" name="gender" required>
+                                    <option value="male">Chọn giới tính</option>
+                                    <option value="other">Nam</option>
+                                    <option value="female">Nữ</option>
+                                </select>
+                            </div>
+
+                            <div class="flatpickr form-group col-md-12">
+                                <input class="form-control input-regis" type="text" id="datePicker" data-input />
+                                <i class="fa-solid fa-calendar-days icon-calendar"></i>
+                            </div>
+
+                            <div class="form-group col-md-12">
+                                <select class="form-control input-regis" id="city" aria-label=".form-select-sm">
+                                    <option value="" selected>Chọn tỉnh thành</option>
+                                </select>
+                            </div>
+                            <div class="row col-12">
+                                <div class="form-group col-md-3">
+                                    <button class="btn-orange bg-red btn-order text-uppercase w-100">Đăng ký</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- <div class="footer px-5" style="background: #e31837; margin-top: auto">
+                    <div class="row">
+                        <div class="col-1 logo-joli col-1 mb-1 mt-3">
+                            <a href>
+                                <img src="public/img/logo.png" width="100px" height="100px" alt />
+                            </a>
+                        </div>
+                        <div class="col-4 mt-5">
+                            <style></style>
+                            <div class="info_address white">
+                                <p>CÔNG TY TNHH JOLLIBEE VIỆT NAM</p>
+                                <p>Địa chỉ: Tầng 26, Tòa nhà CII Tower, số 152 Điện Biên Phủ, Phường 25, Quận Bình Thạnh, Thành phố Hồ Chí Minh, Việt Nam</p>
+                                <p>Điện thoại: (028) 39309168</p>
+                                <p>Tổng đài: <a href="tel:19001533">1900-1533</a></p>
+                                <p>Mã số thuế: 0303883266</p>
+                                <p>Ngày cấp: 15/07/2008 – Nơi cấp: Cục Thuế Hồ Chí Minh</p>
+                                <p>Hộp thư góp ý: <a href="mailto:jbvnfeedback@jollibee.com.vn">jbvnfeedback@jollibee.com.vn</a></p>
+                                <p>&nbsp;</p>
+                            </div>
+                        </div>
+                        <div class="col col-4 mt-5 white">
+                            <a title="GIAO HÀNG TẬN NƠI MIỄN PHÍ" href="tel:19001533"> <img class="img-responsive" src="https://jollibee.com.vn/media/wysiwyg/delivery-lg_1.png" alt="" /> </a>
+                            <ul class="list-page">
+                                <li><a href="/lien-he">Liên hệ</a></li>
+                                <li><a href="/chinh-sach-va-quy-dinh-chung">Chính sách và quy định chung</a></li>
+                                <li><a href="/chinh-sach-thanh-toan-khi-dat-hang">Chính sách thanh toán khi đặt hàng</a></li>
+                                <li><a href="/chinh-sach-hoat-dong">Chính sách hoạt động</a></li>
+                                <li><a href="/chinh-sach-bao-mat">Chính sách bảo mật thông tin</a></li>
+                                <li><a href="/thong-tin-van-chuyen-va-giao-nhan">Thông tin vận chuyển và giao nhận</a></li>
+                                <li><a href="/thong-tin-dang-ky-giao-dich-chung">Thông tin đăng ký giao dịch chung</a></li>
+                                <li><a href="/huong-dan-dat-phan-an">Hướng dẫn đặt phần ăn</a></li>
+                            </ul>
+                        </div>
+                        <div class="col col-3 mt-5">
+                            <p class="text-uppercase title" style="font-size: 20px">HÃY KẾT NỐI VỚI CHÚNG TÔI</p>
+                            <div class="block-social no-padding">
+                                <a class="btn-icon text-white d-flex my-3" href="http://www.facebook.com/JollibeeVietnam"><img src="https://jollibee.com.vn/media/wysiwyg/icon-fb.png" alt="Facebook" width="34" /><span class="white text mt-2 ml-3">Facebook </span></a>
+                                <a class="btn-icon text-white d-flex my-3" href="mailto:jbvnfeedback@jollibee.com.vn"><img src="https://jollibee.com.vn/media/wysiwyg/icon-mail.png" alt="Google mail" width="34" /> <span class="white text mt-2 ml-3">E-Mail</span></a>
+                            </div>
+
+                            <a href="http://online.gov.vn/Home/WebDetails/92800" target="_blank" rel="noopener"><img src="https://jollibee.com.vn/media/wysiwyg/bocongthuong.png" alt="" /></a>
+                            <hr />
+                            <div class="footer-download-app">
+                                <p style="font-family: 'MergeBlack', sans-serif; font-weight: bold; text-align: left; font-size: 20px; text-transform: uppercase; margin-bottom: 20px"><span style="color: #ffffff">TẢI ỨNG DỤNG ĐẶT HÀNG VỚI NHIỀU ƯU ĐÃI HƠN</span></p>
+                                <a href="https://play.google.com/store/apps/details?id=com.jollibee.loyalty"> <img src="https://jollibee.com.vn/media/jollibee/logo_playstore.png" alt="" width="140" height="42" /></a
+                                ><a href="https://apps.apple.com/vn/app/jollibee-vietnam/id1554984107"> <img src="https://jollibee.com.vn/media/jollibee/logo_appstore.png" alt="" width="140" height="42" /></a>
+                            </div>
+                            <p>&nbsp;</p>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </body>
+</html>
+<script>
+    var citis = document.getElementById('city');
+    var districts = document.getElementById('district');
+    var wards = document.getElementById('ward');
+    var Parameter = {
+        url: 'https://raw.githubusercontent.com/kenzouno1/DiaGioiHanhChinhVN/master/data.json',
+        method: 'GET',
+        responseType: 'application/json',
+    };
+    var promise = axios(Parameter);
+    promise.then(function (result) {
+        renderCity(result.data);
+    });
+
+    function renderCity(data) {
+        for (const x of data) {
+            citis.options[citis.options.length] = new Option(x.Name, x.Id);
+        }
+        citis.onchange = function () {
+            district.length = 1;
+            ward.length = 1;
+            if (this.value != '') {
+                const result = data.filter((n) => n.Id === this.value);
+
+                for (const k of result[0].Districts) {
+                    district.options[district.options.length] = new Option(k.Name, k.Id);
+                }
+            }
+        };
+        district.onchange = function () {
+            ward.length = 1;
+            const dataCity = data.filter((n) => n.Id === citis.value);
+            if (this.value != '') {
+                const dataWards = dataCity[0].Districts.filter((n) => n.Id === this.value)[0].Wards;
+
+                for (const w of dataWards) {
+                    wards.options[wards.options.length] = new Option(w.Name, w.Id);
+                }
+            }
+        };
+    }
+</script>

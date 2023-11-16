@@ -14,6 +14,7 @@
         <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.0/js/bootstrap.js"></script> -->
         <link rel="stylesheet" href="public/css/index.css" />
         <link rel="stylesheet" href="public/css/order.css" />
+        <link rel="stylesheet" href="public/css/product.css" />
         <script src="public/js/index.js"></script>
         <!-- <script src="{{ asset('public/js/index.js') }}"></script> -->
 
@@ -183,107 +184,148 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="content-order" style="">
+                <style></style>
+                <div class="content-order">
                     <div class="main-content-order" style="margin: 0px 13%">
-                        <ol class="product_list">
-                            <li class="product_item">
-                                <div class="main-food">
-                                    <div class="img-food text-center">
-                                        <img src="public/img/2_ga_gion_khoai_nc.png" alt="" />
-                                    </div>
-                                    <div class="desc-food text text-center mb-5" style="font-size: 18px"><span>2 MIẾNG GÀ GIÒN + KHOAI TÂY VỪA + NƯỚC NGỌT LỚN</span></div>
-                                    <div class="price-food fontw-700 red text-center" style="font-size: 16px">91,000 ₫</div>
-                                    <div class="order text-center my-5">
-                                        <a href="product.html" class=" action btn-red">Đặt hàng</a>
+                        <div class="product_item_main row">
+                            <div class="main-food col-6">
+                                <div class="img-food text-center">
+                                    <img src="public/img/2_ga_gion_khoai_nc.png" alt="" />
+                                </div>
+                                <div class="desc-food text text-center mb-5" style="font-size: 18px"><span>2 MIẾNG GÀ GIÒN + KHOAI TÂY VỪA + NƯỚC NGỌT LỚN</span></div>
+                            </div>
+
+                            <div class="noodles w-100 mb-5 form-input col-6">
+                                <!-- //noodles -->
+                                <div class="btn-yelo select_product mb-1 mr-1" aria-label=".form-select-sm">
+                                    <label class="mt-2 cursor-pointer"><span class="ml-3 pt-4">CHỌN MÌ</span></label>
+                                    <div class="list_nood d-none">
+                                        <div class="tab-pro all w-100" style="justify-content: space-between">
+                                            <div class="all">
+                                                <img src="public/img/m__2.png" alt="" />
+                                                <div class="product_name">
+                                                    <span class="">Mì Ý Sốt Bò Bằm Lớn</span>
+                                                </div>
+                                            </div>
+                                            <div class="checked-product mr-2">
+                                                <input class="radio" checked name="product_group_nood" type="radio" />
+                                            </div>
+                                        </div>
+                                        <div class="tab-pro all w-100" style="justify-content: space-between">
+                                            <div class="all">
+                                                <img src="public/img/m__2.png" alt="" />
+                                                <div class="product_name">
+                                                    <span class="">Mì Ý Sốt Bò Bằm Lớn</span>
+                                                </div>
+                                            </div>
+                                            <div class="checked-product mr-2">
+                                                <input class="radio" name="product_group_nood" type="radio" />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </li>
-                            <li class="product_item">
-                                <div class="main-food">
-                                    <div class="img-food text-center">
-                                        <img src="public/img/2_ga_gion_khoai_nc.png" alt="" />
-                                    </div>
-                                    <div class="desc-food text text-center mb-5" style="font-size: 18px"><span>2 MIẾNG GÀ GIÒN + KHOAI TÂY VỪA + NƯỚC NGỌT LỚN</span></div>
-                                    <div class="price-food fontw-700 red text-center" style="font-size: 16px">91,000 ₫</div>
-                                    <div class="order text-center my-5">
-                                        <a href="product.html" class=" action btn-red">Đặt hàng</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="product_item" style="">
-                                <div class="main-food">
-                                    <div class="img-food text-center">
-                                        <img src="public/img/2_ga_gion_khoai_nc.png" alt="" />
-                                    </div>
-                                    <div class="desc-food text text-center mb-5" style="font-size: 18px"><span>2 MIẾNG GÀ GIÒN + KHOAI TÂY VỪA + NƯỚC NGỌT LỚN</span></div>
-                                    <div class="price-food fontw-700 red text-center" style="font-size: 16px">91,000 ₫</div>
-                                    <div class="order text-center my-5">
-                                        <a href="product.html" class=" action btn-red">Đặt hàng</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="product_item">
-                                <div class="main-food">
-                                    <div class="img-food text-center">
-                                        <img src="public/img/2_ga_gion_khoai_nc.png" alt="" />
-                                    </div>
-                                    <div class="desc-food text text-center mb-5" style="font-size: 18px"><span>2 MIẾNG GÀ GIÒN + KHOAI TÂY VỪA + NƯỚC NGỌT LỚN</span></div>
-                                    <div class="price-food fontw-700 red text-center" style="font-size: 16px">91,000 ₫</div>
-                                    <div class="order text-center my-5">
-                                        <a href="product.html" class="action btn-red">Đặt hàng</a>
+                                <!-- //chicken -->
+                                <div class="btn-yelo select_product mb-1 mr-1" aria-label=".form-select-sm">
+                                    <label class="mt-2 cursor-pointer"><span class="ml-3 pt-4">CHỌN Gà</span></label>
+                                    <div class="list_chick d-none">
+                                        <div class="tab-pro all w-100" style="justify-content: space-between">
+                                            <div class="all">
+                                                <img src="public/img/m__2.png" alt="" />
+                                                <div class="product_name">
+                                                    <span class="">Gà 1</span>
+                                                </div>
+                                            </div>
+                                            <div class="checked-product mr-2">
+                                                <input class="radio" checked name="product_group_chick" type="radio" />
+                                            </div>
+                                        </div>
+                                        <div class="tab-pro all w-100" style="justify-content: space-between">
+                                            <div class="all">
+                                                <img src="public/img/m__2.png" alt="" />
+                                                <div class="product_name">
+                                                    <span class="">Gà 2</span>
+                                                </div>
+                                            </div>
+                                            <div class="checked-product mr-2">
+                                                <input class="radio" name="product_group_chick" type="radio" />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </li>
-                            <li class="product_item" style="">
-                                <div class="main-food">
-                                    <div class="img-food text-center">
-                                        <img src="public/img/2_ga_gion_khoai_nc.png" alt="" />
-                                    </div>
-                                    <div class="desc-food text text-center mb-5" style="font-size: 18px"><span>2 MIẾNG GÀ GIÒN + KHOAI TÂY VỪA + NƯỚC NGỌT LỚN</span></div>
-                                    <div class="price-food fontw-700 red text-center" style="font-size: 16px">91,000 ₫</div>
-                                    <div class="order text-center my-5">
-                                        <a href="product.html" class=" action btn-red">Đặt hàng</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="product_item" style="">
-                                <div class="main-food">
-                                    <div class="img-food text-center">
-                                        <img src="public/img/2_ga_gion_khoai_nc.png" alt="" />
-                                    </div>
-                                    <div class="desc-food text text-center mb-5" style="font-size: 18px"><span>2 MIẾNG GÀ GIÒN + KHOAI TÂY VỪA + NƯỚC NGỌT LỚN</span></div>
-                                    <div class="price-food fontw-700 red text-center" style="font-size: 16px">91,000 ₫</div>
-                                    <div class="order text-center my-5">
-                                        <a href="product.html" class=" action btn-red">Đặt hàng</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="product_item" style="">
-                                <div class="main-food">
-                                    <div class="img-food text-center">
-                                        <img src="public/img/2_ga_gion_khoai_nc.png" alt="" />
-                                    </div>
-                                    <div class="desc-food text text-center mb-5" style="font-size: 18px"><span>2 MIẾNG GÀ GIÒN + KHOAI TÂY VỪA + NƯỚC NGỌT LỚN</span></div>
-                                    <div class="price-food fontw-700 red text-center" style="font-size: 16px">91,000 ₫</div>
-                                    <div class="order text-center my-5">
-                                        <a href="product.html" class=" action btn-red">Đặt hàng</a>
+                                <!-- //water  -->
+                                <div class="btn-yelo select_product mb-1 mr-1" aria-label=".form-select-sm">
+                                    <label class="mt-2 cursor-pointer"><span class="ml-3 pt-4">CHỌN Nước</span></label>
+                                    <div class="list_water d-none">
+                                        <div class="tab-pro all w-100" style="justify-content: space-between">
+                                            <div class="all">
+                                                <img src="public/img/m__2.png" alt="" />
+                                                <div class="product_name">
+                                                    <span class="">Gà 1</span>
+                                                </div>
+                                            </div>
+                                            <div class="checked-product mr-2">
+                                                <input class="radio" checked name="product_group_water" type="radio" />
+                                            </div>
+                                        </div>
+                                        <div class="tab-pro all w-100" style="justify-content: space-between">
+                                            <div class="all">
+                                                <img src="public/img/m__2.png" alt="" />
+                                                <div class="product_name">
+                                                    <span class="">Gà 2</span>
+                                                </div>
+                                            </div>
+                                            <div class="checked-product mr-2">
+                                                <input class="radio" name="product_group_water" type="radio" />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </li>
-                            <li class="product_item" style="">
-                                <div class="main-food">
-                                    <div class="img-food text-center">
-                                        <img src="public/img/2_ga_gion_khoai_nc.png" alt="" />
-                                    </div>
-                                    <div class="desc-food text text-center mb-5" style="font-size: 18px"><span>2 MIẾNG GÀ GIÒN + KHOAI TÂY VỪA + NƯỚC NGỌT LỚN</span></div>
-                                    <div class="price-food fontw-700 red text-center" style="font-size: 16px">91,000 ₫</div>
-                                    <div class="order text-center my-5">
-                                        <a href="product.html" class=" action btn-red">Đặt hàng</a>
+                                <!-- //themmon -->
+                                <div class="btn-yelo select_product mb-1 mr-1" aria-label=".form-select-sm">
+                                    <label class="mt-2 cursor-pointer"><span class="ml-3 pt-4">Thêm món</span></label>
+                                    <div class="list_add d-none">
+                                        <div class="tab-pro all w-100" style="justify-content: space-between">
+                                            <div class="all">
+                                                <img src="public/img/m__2.png" alt="" />
+                                                <div class="product_name">
+                                                    <span class="">Gà 1</span>
+                                                </div>
+                                            </div>
+                                            <div class="checked-product mr-2">
+                                                <input class="radio" checked name="product_group_add" type="radio" />
+                                            </div>
+                                        </div>
+                                        <div class="tab-pro all w-100" style="justify-content: space-between">
+                                            <div class="all">
+                                                <img src="public/img/m__2.png" alt="" />
+                                                <div class="product_name">
+                                                    <span class="">Gà 2</span>
+                                                </div>
+                                            </div>
+                                            <div class="checked-product mr-2">
+                                                <input class="radio" name="product_group_add" type="radio" />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </li>
-                        </ol>
+                                <style></style>
+                                <div class="filed-qty-order my-4">
+                                    <div class="row">
+                                        <div class="quantity col-6 all">
+                                            <button class="minus bg-red">-</button>
+                                            <input type="text" class="qty" value="1" />
+                                            <button class="plus bg-red">+</button>
+                                        </div>
+                                        <div class="total col-6">
+                                            <span class="price">88,000 ₫</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="confirm-order w-100">
+                                    <button class=" btn-orange bg-red btn-order text-uppercase w-100">Đặt hàng</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="footer px-5" style="background: #e31837; margin-top: auto">

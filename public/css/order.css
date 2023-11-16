@@ -4,6 +4,10 @@
 ol {
     list-style: none;
 }
+.all {
+    display: flex;
+    align-items: center;
+}
 .main-sub-menu a img:hover {
 }
 .main-sub-menu li {
@@ -46,6 +50,14 @@ ul > li > a {
     margin: 0;
     display: flex;
     flex-wrap: wrap; /* Cho phép các phần tử chuyển hàng khi không đủ không gian */
+    justify-content: space-around; /* Căn giữa theo chiều ngang */
+    justify-content: flex-start;
+}
+.product_item_main {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
     justify-content: space-around; /* Căn giữa theo chiều ngang */
     justify-content: flex-start;
 }

@@ -1,0 +1,77 @@
+.border-none {
+    border: none;
+}
+.btn-yelo {
+    text-decoration: none;
+    width: 100%;
+    color: #000;
+    background-color: #ffc522;
+    font-size: 17px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    border-radius: 5px;
+    margin-bottom: 0;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+}
+.tab-pro {
+    background-color: #f2f2f2;
+}
+.product_name {
+    font-size: 13px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.radio {
+    width: 23px;
+    height: 19px;
+}
+.minus,
+.plus {
+    width: 45px !important;
+    height: 45px;
+    border-radius: 7px;
+    font-size: 31px;
+    font-family: Arial;
+    font-weight: 400;
+    line-height: initial;
+    padding: 0;
+    box-sizing: border-box;
+}
+.bg-red {
+    background: #e31837;
+    border: 1px solid #e31837;
+    color: #fff;
+}
+.qty {
+    height: 45px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    min-width: 70px;
+    font-weight: bold;
+    margin: 0 10px 0 10px;
+    width: 0px;
+    text-align: center;
+}
+.price {
+    font-size: 24px;
+    color: #e31837;
+    font-weight: 900;
+}
+.total {
+    text-align: end;
+}
+.icon-calendar {
+    position: absolute;
+    top: 50%;
+    left: 96%;
+    transform: translate(-100%, -50%);
+}
+.a-login {
+    color: #0696f8;
+    font-weight: normal;
+    text-decoration: underline;
+}
+.a-login:hover {
+    /* color: inherit; */
+}

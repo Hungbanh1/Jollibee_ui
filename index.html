@@ -8,13 +8,17 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
         <!-- jQuery (để sử dụng các plugin của Bootstrap cần jQuery) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
 
         <!-- Latest compiled and minified JavaScript -->
         <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.0/js/bootstrap.js"></script> -->
         <link rel="stylesheet" href="public/css/index.css" />
         <link rel="stylesheet" href="public/css/order.css" />
+        <link rel="stylesheet" href="public/css/product.css" />
         <script src="public/js/index.js"></script>
-
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <!-- //font-awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link href="https://db.onlinewebfonts.com/c/a2029ef7cc1a92ac4469e7891b9195f6?family=Merge" rel="stylesheet" />
@@ -52,9 +56,42 @@
                                         <div class="account d-flex alg-center white-space-nowrap">
                                             <img src="public/img/icon-user.png" alt="" />
                                             <div class="ml-2 login text">
-                                                <a href>Đăng nhập <span>/</span> </a>
+                                                <a data-toggle="modal" data-target="#myModal" href>Đăng nhập <span>/</span> </a>
                                             </div>
 
+                                            <div class="modal" id="myModal">
+                                                <div class="modal-dialog modal-lg">
+                                                    <div class="modal-content">
+                                                        <div class="">
+                                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                            <div class="logo-header-model my-3 text-center">
+                                                                <img src="public/img/logo.png" width="90px" height="90px" alt="" />
+                                                            </div>
+                                                            <h4 class="modal-title text-center">VUI LÒNG ĐĂNG NHẬP</h4>
+                                                        </div>
+                                                        <form class="form" method="POST">
+                                                            <div class="modal-body">
+                                                                <div class="form-group">
+                                                                    <input type="text" class="form-control" name="name" id="name" placeholder="Email / Số điện thoại" />
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Mật khẩu" />
+                                                                </div>
+                                                                <div class="form-group text-right">
+                                                                    <small class="forgot-pass">Quên mật khẩu ?</small>
+                                                                </div>
+                                                                <!-- <button class="btn-orange btn-order text-uppercase">Đăng nhập</button> -->
+                                                            </div>
+                                                            <div class="bg-yelo-1 text-center w-100 py-4">
+                                                                <a href="" class="action btn-red">Đăng nhập</a>
+                                                                <div class="u-have-account mt-4" style="white-space: nowrap">
+                                                                    <small class="mr-1">Bạn chưa có tài khoản?<a class="a-login ml-1" href="">Đăng ký</a></small>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <div class="register text ml-2">
                                                 <a href>Đăng ký</a>
                                             </div>
@@ -123,7 +160,7 @@
 
                 <div class="content">
                     <div class="content-top banner">
-                        <img class="w-100" src="public/img/web-06.jpg" alt="" />
+                        <img class="w-100" style="margin-top: 9%" src="public/img/web-06.jpg" alt="" />
                     </div>
                     <div class="content-bottom">
                         <div class="main-content-bottom">
@@ -143,7 +180,7 @@
                                         </div>
                                         <div class="bot-img">
                                             <img src="public/img/e17856b74b7a0e-titlegagionvuive.png" alt="" />
-                                            <button class="btn btn-orange btn-order text-uppercase">Đặt hàng</button>
+                                            <button class="btn-orange btn-order text-uppercase">Đặt hàng</button>
                                         </div>
                                     </a>
                                     <a class="main-menu" href="">
@@ -152,7 +189,7 @@
                                         </div>
                                         <div class="bot-img">
                                             <img src="public/img/e17856b74b7a0e-titlegagionvuive.png" alt="" />
-                                            <button class="btn btn-orange btn-order text-uppercase">Đặt hàng</button>
+                                            <button class="btn-orange btn-order text-uppercase">Đặt hàng</button>
                                         </div>
                                     </a>
                                     <a class="main-menu" href="">
@@ -161,7 +198,7 @@
                                         </div>
                                         <div class="bot-img">
                                             <img src="public/img/e17856b74b7a0e-titlegagionvuive.png" alt="" />
-                                            <button class="btn btn-orange btn-order text-uppercase">Đặt hàng</button>
+                                            <button class="btn-orange btn-order text-uppercase">Đặt hàng</button>
                                         </div>
                                     </a>
                                     <a class="main-menu" href="">
@@ -170,7 +207,7 @@
                                         </div>
                                         <div class="bot-img">
                                             <img src="public/img/e17856b74b7a0e-titlegagionvuive.png" alt="" />
-                                            <button class="btn btn-orange btn-order text-uppercase">Đặt hàng</button>
+                                            <button class="btn-orange btn-order text-uppercase">Đặt hàng</button>
                                         </div>
                                     </a>
                                 </div>
@@ -196,7 +233,7 @@
                                         <style></style>
                                         <div class="content-h4-service text-center mt-50">
                                             <h4 class="h4-services" style="">LẤY TẠI CỬA HÀNG</h4>
-                                            <a href="" class="btn action btn-red">Xem thêm</a>
+                                            <a href="" class="action btn-red">Xem thêm</a>
                                         </div>
                                     </div>
                                 </div>
@@ -209,7 +246,7 @@
                                         <div class="content-h4-service text-center mt-50">
                                             <h4 class="h4-services" style="">LẤY TẠI CỬA HÀNG</h4>
 
-                                            <a href="" class="btn action btn-red">Xem thêm</a>
+                                            <a href="" class="action btn-red">Xem thêm</a>
                                         </div>
                                     </div>
                                 </div>
@@ -222,7 +259,7 @@
                                         <div class="content-h4-service text-center mt-50">
                                             <h4 class="h4-services" style="">LẤY TẠI CỬA HÀNG</h4>
 
-                                            <a href="" class="btn action btn-red">Xem thêm</a>
+                                            <a href="" class="action btn-red">Xem thêm</a>
                                         </div>
                                     </div>
                                 </div>
@@ -235,7 +272,7 @@
                                         <div class="content-h4-service text-center mt-50">
                                             <h4 class="h4-services" style="">LẤY TẠI CỬA HÀNG</h4>
 
-                                            <a href="" class="btn action btn-red">Xem thêm</a>
+                                            <a href="" class="action btn-red">Xem thêm</a>
                                         </div>
                                     </div>
                                 </div>
@@ -253,7 +290,7 @@
                                     </p>
                                 </div>
                                 <div class="order">
-                                    <a href="" class="btn action btn-red">Đặt hàng</a>
+                                    <a href="" class="action btn-red">Đặt hàng</a>
                                 </div>
                             </div>
                         </div>
@@ -266,12 +303,16 @@
                             <select class="form-select form-control form-select-sm mb-3 mr-1 sl-location" id="city" aria-label=".form-select-sm">
                                 <option value="" selected>Chọn tỉnh thành</option>
                             </select>
-                            <select class="form-select form-control form-select-sm mb-3 ml-1 sl-location" id="districts" aria-label=".form-select-sm">
+                            <select class="form-select form-control form-select-sm mb-3 ml-1 sl-location" id="district" aria-label=".form-select-sm">
                                 <option value="" selected>Chọn quận huyện</option>
                             </select>
+                            <div id="ward" class=""></div>
+                            <!-- <select class="form-select form-control form-select-sm mb-3 ml-1 sl-location" id="ward" aria-label=".form-select-sm">
+                                <option value="" selected>Chọn quận huyện</option>
+                            </select> -->
                         </div>
                         <div class="search col-2">
-                            <a href="" class="btn action btn-red mb-2 btn-search">Tìm kiếm</a>
+                            <a href="" class="action btn-red mb-2">Tìm kiếm</a>
                         </div>
                     </div>
                     <div class="posts">
@@ -318,7 +359,7 @@
                                 </div>
                             </div>
                             <div class="content-h4-service text-center mt-5">
-                                <a href="" class="btn action btn-red">Xem thêm</a>
+                                <a href="" class="action btn-red">Xem thêm</a>
                             </div>
                         </div>
                     </div>
@@ -378,3 +419,45 @@
         </div>
     </body>
 </html>
+<script>
+    var citis = document.getElementById('city');
+    var districts = document.getElementById('district');
+    var wards = document.getElementById('ward');
+    var Parameter = {
+        url: 'https://raw.githubusercontent.com/kenzouno1/DiaGioiHanhChinhVN/master/data.json',
+        method: 'GET',
+        responseType: 'application/json',
+    };
+    var promise = axios(Parameter);
+    promise.then(function (result) {
+        renderCity(result.data);
+    });
+
+    function renderCity(data) {
+        for (const x of data) {
+            citis.options[citis.options.length] = new Option(x.Name, x.Id);
+        }
+        citis.onchange = function () {
+            district.length = 1;
+            ward.length = 1;
+            if (this.value != '') {
+                const result = data.filter((n) => n.Id === this.value);
+
+                for (const k of result[0].Districts) {
+                    district.options[district.options.length] = new Option(k.Name, k.Id);
+                }
+            }
+        };
+        district.onchange = function () {
+            ward.length = 1;
+            const dataCity = data.filter((n) => n.Id === citis.value);
+            if (this.value != '') {
+                const dataWards = dataCity[0].Districts.filter((n) => n.Id === this.value)[0].Wards;
+
+                for (const w of dataWards) {
+                    wards.options[wards.options.length] = new Option(w.Name, w.Id);
+                }
+            }
+        };
+    }
+</script>
